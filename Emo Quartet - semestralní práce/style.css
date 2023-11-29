@@ -5,11 +5,11 @@
 }
 
 .tab2 {
-
+  background-color: #000;
 }
 
 .tab3 {
-
+  background-color: #FFF;
 }
 
 
@@ -93,8 +93,28 @@
 
 
 
+/* main functionality */
+html, body, section {
+  block-size: 100%;
+}
 
+html {
+  scroll-snap-type: y mandatory;
+}
 
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 4rem;
+}
 
 /* colors at hover soc */
 #fb {color: #FFF;}
