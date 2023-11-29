@@ -1,7 +1,7 @@
 /* shell */
 .tab1 {
-  background-image: url("ProtivinskyVojtech/protivinskyvojtech.github.io/Emo Quartet - semestralní práce/media/mcr-bg.png");
-  background-color: #F00;
+  background-image: url(./media/mcr-bg.png);
+
 }
 
 .tab2 {
@@ -9,89 +9,132 @@
 }
 
 .tab3 {
-  background-color: #FFF;
+  background-image: url(./media/mcr-band.png);
+  background-color: #000;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tab3 div {
+
 }
 
 
+/* css */
+li {
+  list-style-type: none;
+}
+
+/* header */
+header {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+/*  background-color: #F00; */
+  margin-top: 0;
+}
+
+.headerSoc {
+  height: 100px;
+  position: fixed;
+  right: 0;
+  padding-top: 0;
+  padding-right: 30px;
+}
+
+.headerSoc ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.headerLogo ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding-top: 5px;
+  padding-left: 55px;
+}
+
+.headerSoc ul li h1 {
+  color: #FFF;
+  padding-left: 25px;
+}
+
+/* main */
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  color: #FFF;
+  width: 60vw;
+}
+
+.album {
+  height: 600px;
+}
+
+.albumInfo {
+  text-align: center;
+}
+
+.albumInfo ul li a {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.horizontalScroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.discographyAlbumCover {
+  height: 600px;
+  margin-right: 50px;
+}
+
+/* Drop down menu  */
+.dropDown {
+  width : 500px; 
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+span {
+  padding : 30px;
+  color : white;
+  font-size : 1.2em;
+  font-variant : small-caps;
+  cursor : pointer;
+  display: block;
+}
+
+span::after {
+  float: right;
+  right: 10%;
+}
+
+.slide {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: left;
+  transition: height .4s ease;
+}
 
+.slide li {padding : 30px;}
 
+#touch {position: absolute; opacity: 0; height: 0px;}    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#touch:checked + .slide {height: 500px;}
 
 /* main functionality */
 html, body, section {
@@ -106,14 +149,39 @@ section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
-  align-items: center;
-  justify-content: center;
+/*  align-items: center;
+  justify-content: center; */
 }
 
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  font-size: 4rem;
+/*  font-size: 4rem; */
+}
+
+/* link animation */
+.fancyLink {
+	position: relative;
+	transition: color .3s ease-in-out;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		height: 3px;
+		background-color: #FFF;
+		transform: scaleX(0);
+		transition: transform .3s ease-in-out;
+	}
+	
+	&:hover {
+		color: #FFF;
+	}
+	
+	&:hover::before {
+		transform: scaleX(1);
+	}	
 }
 
 /* colors at hover soc */
