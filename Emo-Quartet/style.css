@@ -249,3 +249,21 @@ body {
 #yt:hover {color: #FF0000; padding-left: 25px;}
 #sp {color: #FFF; padding-left: 25px;}
 #sp:hover {color: #1DB954; padding-left: 25px;}
+
+/* scroll bar */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #424242 #ffffff00;
+}
+/* Chromium */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+ *::-webkit-scrollbar-thumb {
+  background-color: #424242;
+  border-radius: 10px;
+}
