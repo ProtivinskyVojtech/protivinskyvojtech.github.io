@@ -252,3 +252,5 @@ body {
 
 /* scroll bar */
 ::-webkit-scrollbar { display: none; }
+html {scrollbar-width: none;}
+  
