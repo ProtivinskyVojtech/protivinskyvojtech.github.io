@@ -252,18 +252,18 @@ body {
 
 /* scroll bar */
 /* Firefox */
-* {
+html {
   scrollbar-width: auto;
   scrollbar-color: #424242 #ffffff00;
 }
 /* Chromium */
-*::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 10px;
 }
-*::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background: #ffffff00;
 }
- *::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background-color: #424242;
   border-radius: 10px;
 }
