@@ -258,12 +258,12 @@ html {
 }
 /* Chromium */
 html::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 html::-webkit-scrollbar-track {
   background: #ffffff00;
 }
 html::-webkit-scrollbar-thumb {
   background-color: #424242;
-  border-radius: 10px;
+  border-radius: 5px;
 }
