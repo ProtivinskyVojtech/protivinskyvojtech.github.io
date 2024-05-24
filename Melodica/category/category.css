@@ -1,0 +1,252 @@
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.banner {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('path_to_your_image.jpg') no-repeat center center;
+  background-size: cover;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.banner-menu {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-menu li {
+  margin-right: 10px;
+  position: relative;
+}
+
+.banner-menu li:not(:last-child)::after {
+  content: "/";
+  position: absolute;
+  right: -10px;
+  color: var(--text);
+}
+
+.banner-menu li a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.banner-menu svg {
+  height: 15px;
+}
+
+.banner h1 {
+  font-size: 100px;
+  margin: 10px;
+  text-align: left;
+}
+
+/* Product category grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.product-item {
+  border-bottom: 1px solid var(--muted);
+  padding: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--text);
+}
+
+.product-item:hover {
+  background-color: var(--overlay);
+  color: var(--pine);
+}
+
+.product-item img {
+  width: 50px;
+  height: auto;
+  margin-right: 50px;
+}
+
+.product-item p {
+  margin: 0;
+  text-align: center;
+}
+
+/* top sellers */
+.top-sellers {
+  margin-top: 40px;
+}
+
+.top-sellers h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.top-sellers .top-seller-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--muted);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100px;
+}
+
+.top-sellers .top-seller-item:hover {
+  background-color: var(--overlay);
+  color: var(--pine);
+}
+
+.top-sellers .top-seller-item img {
+  height: 80px;
+  width: 80px;
+  margin-right: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.top-sellers .product-details {
+  flex-grow: 1;
+}
+
+.top-sellers .top-seller-item p {
+  margin: 0;
+}
+
+.top-sellers .product-features {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  font-size: 0.9rem;
+}
+
+.top-sellers .product-features li {
+  padding: 0 5px;
+  border-right: 1px solid var(--muted);
+}
+
+.top-sellers .product-features li:last-child {
+  border-right: none;
+}
+
+.top-sellers .top-seller-item span {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.filter-buttons button,
+.filter-detail button {
+  background: none;
+  border: none;
+  color: var(--text);
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-detail button:hover {
+  background-color: var(--overlay);
+  color: var(--pine);
+}
+
+.filter-detail button {
+  display: flex;
+  align-items: center;
+}
+
+.filter-detail button svg {
+  margin-right: 10px;
+}
+
+/* Product Grid Section */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.product-card {
+  border: 2px solid var(--muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+  border-radius: 12px;
+}
+
+.product-card img {
+  background: white;
+  border-bottom: 2px solid var(--muted);
+  width: 100%;
+  object-fit: scale-down;
+  height: 250px;
+  margin-bottom: 10px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.product-card h2 {
+  font-size: 1rem;
+  margin: 10px 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.product-card .ratings {
+  margin: 5px 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.product-card p {
+  margin: 5px 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.product-card .cart-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  background-color: var(--overlay);
+  color: var(--pine);
+}

@@ -1,0 +1,173 @@
+:root {
+  --base: #191724;
+  --surface: #1f1d2e;
+  --overlay: #26233a;
+  --muted: #6e6a86;
+  --text: #e0def4;
+  --love: #eb6f92;
+  --gold: #f6c177;
+  --rose: #ebbcba;
+  --pine: #31748f;
+  --foam: #9ccfd8;
+  --iris: #c4a7e7;
+}
+
+/*
+@media (prefers-color-scheme: light) {
+  :root {
+    --base: #faf4ed;
+    --surface: #fffaf3;
+    --overlay: #f2e9e1;
+    --muted: #9893a5;
+    --text: #575279;
+    --love: #b4637a;
+    --gold: #ea9d34;
+    --rose: #d7827e;
+    --pine: #286983;
+    --foam: #56949f;
+    --iris: #907aa9;
+  }
+}
+*/
+
+::selection {
+  color: var(--text);
+  background: var(--iris);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background-color: var(--surface);
+  font-family: "Egyptian 505", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--base);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--overlay);
+  text-align: center;
+  padding: 5px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a svg {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  fill: var(--text);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 5px;
+  width: 200px;
+  height: 30px;
+  font-size: 16px;
+  outline: none;
+  border: 2px solid var(--overlay);
+  border-right: 0;
+  color: var(--text);
+  background-color: var(--surface);
+  border-radius: 12px 0 0 12px;
+}
+
+.search-button {
+  padding: 5px;
+  border-radius: 5px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  border: 2px solid var(--overlay);
+  border-left: 0;
+  color: var(--text);
+  background-color: var(--surface);
+  border-radius: 0 12px 12px 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--overlay);
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 5px;
+  margin-right: 20px;
+  height: 30px;
+}
+
+.actions a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.shopping-cart,
+.profile-button {
+  margin: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.shopping-cart svg,
+.profile-button svg {
+  height: 25px;
+  margin: 5px;
+  fill: var(--text);
+}
+
+.shopping-cart span {
+  font-size: 25px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+  padding-top: 120px;
+}
+
+footer {
+  display: flex;
+}
